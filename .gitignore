@@ -2,3 +2,6 @@ build
 smhasher.so
 dist
 MANIFEST
+/debian/python-smhasher.*
+/debian/python-smhasher
+/debian/files

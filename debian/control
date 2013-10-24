@@ -1,0 +1,31 @@
+Source: python-smhasher
+Maintainer: Piotr Piatkowski <pp@idea7.pl>
+Section: python
+Priority: optional
+Build-Depends: python-all-dev (>= 2.6.6-3), debhelper (>= 7)
+Standards-Version: 3.9.1
+
+Package: python-smhasher
+Architecture: any
+Depends: ${misc:Depends}, ${python:Depends}, ${shlibs:Depends}
+Description: Python extension for smhasher hash functions
+ .
+ `python-smhasher` is a Python 2.x/3.x wrapper for the
+ [SMHasher](http://code.google.com/p/smhasher/) non-cryptographic hashing
+ library.  It currently supports the MurmurHash3 64-/128-bit and x86/x64
+ variants.
+ .
+ License: MIT License
+ .
+ Usage
+ -----
+ .
+     >>> import smhasher
+     >>> [k for k in dir(smhasher) if k[0] == 'm']
+     ['murmur3_x64_128', 'murmur3_x64_64', 'murmur3_x86_128', 'murmur3_x86_64']
+ .
+     >>> smhasher.murmur3_x86_128('hello')
+     213030289162235495270783145757721615258L
+ .
+     >>> seed = 1138
+     >>> smhasher.murmur3_x86_128('hello', seed)
