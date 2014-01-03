@@ -5,3 +5,5 @@ MANIFEST
 /debian/python-smhasher.*
 /debian/python-smhasher
 /debian/files
+*.pyc
+.tox
